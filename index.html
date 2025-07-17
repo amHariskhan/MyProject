@@ -1,13 +1,95 @@
-<script>
-let myArr = ["Audi", "BMW", "Ford", "Honda", "Jaguar", "Nissan"];
-function showContent() {
-  let temp, item, a, i;
-  temp = document.getElementsByTagName("template")[0];
-  item = temp.content.querySelector("div");
-  for (i = 0; i < myArr.length; i++) {
-    a = document.importNode(item, true);
-    a.textContent += myArr[i];
-    document.body.appendChild(a);
-  }
-}
-</script>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Sprint Sheet</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 20px;
+      background-color: #f5f5f5;
+    }
+    h1 {
+      text-align: center;
+      color: #333;
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      background-color: #fff;
+      box-shadow: 0 0 10px rgba(0,0,0,0.05);
+    }
+    th, td {
+      padding: 12px 15px;
+      text-align: left;
+      border-bottom: 1px solid #ddd;
+    }
+    th {
+      background-color: #4CAF50;
+      color: white;
+    }
+    tr:hover {
+      background-color: #f1f1f1;
+    }
+    .status-in-progress { color: #ff9800; font-weight: bold; }
+    .status-complete { color: #4caf50; font-weight: bold; }
+    .status-not-started { color: #f44336; font-weight: bold; }
+  </style>
+</head>
+<body>
+
+<h1>Sprint Planning Sheet</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>ID</th>
+      <th>Task</th>
+      <th>Category</th>
+      <th>Assigned To</th>
+      <th>Priority</th>
+      <th>Status</th>
+      <th>Start Date</th>
+      <th>Due Date</th>
+      <th>Notes</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>1</td>
+      <td>Upload 4 new videos</td>
+      <td>Content/Dev</td>
+      <td>John</td>
+      <td>High</td>
+      <td class="status-not-started">Not Started</td>
+      <td>2025-07-17</td>
+      <td>2025-07-19</td>
+      <td>Landing + Tutorial</td>
+    </tr>
+    <tr>
+      <td>2</td>
+      <td>Create charity profile type</td>
+      <td>Backend</td>
+      <td>Sarah</td>
+      <td>High</td>
+      <td class="status-in-progress">In Progress</td>
+      <td>2025-07-17</td>
+      <td>2025-07-24</td>
+      <td>Includes SuperAdmin features</td>
+    </tr>
+    <tr>
+      <td>3</td>
+      <td>Add 2FA Authentication</td>
+      <td>Security</td>
+      <td>Mike</td>
+      <td>Medium</td>
+      <td class="status-not-started">Not Started</td>
+      <td>2025-07-18</td>
+      <td>2025-07-25</td>
+      <td>Ensure security compliance</td>
+    </tr>
+  </tbody>
+</table>
+
+</body>
+</html>
